@@ -1,11 +1,11 @@
 import styled from '@emotion/styled'
 
-function BarSlot ({ projects, index }){
+function BarSlot ({ datavisualizations, index }){
 
     return (
         <BarSlotStyled>
             <div className="rectangle">
-                {index!==false && (<span className="title1">{projects[index].title}</span>)}
+                {index!==false && (<span className="title1">{datavisualizations[index].title}</span>)}
                 {/* {index!==false && (<span className="blurb1">{projects[index].blurb}</span>)} */}
             </div>
             

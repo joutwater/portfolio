@@ -1,29 +1,29 @@
 import fetch from 'isomorphic-unfetch'
 import Link from 'next/link'
 
-const Project = ({ project }) => {
+const Datavisualization = ({ datavisualization }) => {
   // console.log(projects)
   return(
     <div className="container" background-color="#efefef">
       <div className="title">
-        {project.title}
+        {datavisualization.title}
       </div>
       <div className="process">
-        {project.process}
+        {datavisualization.process}
       </div>
       <div className="live_site">
-      <a href={project.link2}>LIVE SITE</a>
+      <a href={datavisualization.link2}>LIVE SITE</a>
       </div>
       <div className="documentation">
-      <a href={project.link}>DOCUMENTATION</a>
+      <a href={datavisualization.link}>DOCUMENTATION</a>
       </div>
       <div className="image">
-      {project.image.map(image => (
+      {datavisualization.image.map(image => (
         <img src={process.env.API_URL + image.url} width="800px" alt="" />
       ))}
       </div>
       <div className="video">
-        {project.video.map(video => (
+        {datavisualization.video.map(video => (
           <video width="800" autoPlay loop>
             <source src={process.env.API_URL + video.url}></source>
           </video>
@@ -32,13 +32,13 @@ const Project = ({ project }) => {
     </div>
   )
   }
-Project.getInitialProps = async ({query}) => {
-  const res = await fetch(process.env.API_URL+'/projects?slug='+query.slug)
+Datavisualization.getInitialProps = async ({query}) => {
+  const res = await fetch(process.env.API_URL+'/data-visualization?slug='+query.slug)
   const data = await res.json()
   return{
-    project:data[0]
+    datavisualization:data[0]
   }
 
 }
 
-export default Project
+export default Datavisualization
