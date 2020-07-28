@@ -33,7 +33,7 @@ const Datavisualization = ({ datavisualization }) => {
   )
   }
 Datavisualization.getInitialProps = async ({query}) => {
-  const res = await fetch(process.env.API_URL+'/data-visualization?slug='+query.slug)
+  const res = await fetch(process.env.API_URL+'/data-visualizations?slug='+query.slug)
   const data = await res.json()
   return{
     datavisualization:data[0]
