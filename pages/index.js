@@ -6,7 +6,7 @@ import React, { useState } from 'react';
 
 const Home = ({ datavisualizations }) => {
   const[isShown, setIsShown] = useState(false);
-  
+
   return(
     <div className="container">
         <BarSlot datavisualizations={datavisualizations} index={isShown}/>
