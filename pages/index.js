@@ -30,7 +30,7 @@ console.log(datavisualizations);
     )}
     {isShown!==false && (
     <div className="image_holder">
-      <img id={datavisualizations[isShown].list_ID} src={process.env.API_URL + datavisualizations[isShown].image[0].url} width="750px" alt=""/>
+      <img id={datavisualizations[isShown].list_ID} src={datavisualizations[isShown].image[0].url} width="750px" alt=""/>
     </div>
     )}
     </div>
