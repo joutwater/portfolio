@@ -19,13 +19,13 @@ const Datavisualization = ({ datavisualization }) => {
       </div>
       <div className="image">
       {datavisualization.image.map(image => (
-        <img src={process.env.API_URL + image.url} width="800px" alt="" />
+        <img src={image.url} width="800px" alt="" />
       ))}
       </div>
       <div className="video">
         {datavisualization.video.map(video => (
           <video width="800" autoPlay loop>
-            <source src={process.env.API_URL + video.url}></source>
+            <source src={video.url}></source>
           </video>
           ))} 
       </div>
