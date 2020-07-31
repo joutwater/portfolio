@@ -58,13 +58,13 @@ const BarSlotStyled = styled.div`
 }
 }
 
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 801px) {
 .title1 {
     margin-left: 6.8vw;
 }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 800px) {
 .title1 {
     margin-left: 3.2vw;
 }

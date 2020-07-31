@@ -302,6 +302,14 @@ const GlobalStyles = () => (
                     color: inherit;
                     opacity: .5;
                 }
+
+                @mixin hover-supported {    
+                    @media not all and (pointer: coarse) {
+                        &:hover {
+                            @content;
+                        }
+                    }
+                }
                 
                 .container {
                     max-width: 1260px;
@@ -324,6 +332,7 @@ const GlobalStyles = () => (
                     
                 }
 
+                @media not all and (pointer: coarse) {
                 .project_links:hover {
                     opacity: 0;
                 }
@@ -331,8 +340,9 @@ const GlobalStyles = () => (
                 .image_holder img{
                     animation: image-fade-in 2s;
                 }
+                }
 
-                @media screen and (min-width: 1025px) {
+                @media screen and (min-width: 1025px){
                 .image_holder{
                     display: block;
                     text-align: right;
@@ -343,9 +353,11 @@ const GlobalStyles = () => (
                 @media screen and (max-width: 1024px) {
                 .image_holder{
                     display: block;
+                    opacity: 0;
                 }
                 }
 
+                @media not all and (pointer: coarse) {
                 @keyframes image-fade-in {
                 0% {
                     opacity: 0.0;
@@ -354,7 +366,9 @@ const GlobalStyles = () => (
                     opacity: 1.0;
                 }
                 }
+                }
 
+                @media screen and (min-width: 1025px){
                 .blurb_holder{
                     position: absolute;
                     display: block;
@@ -364,6 +378,13 @@ const GlobalStyles = () => (
                     margin-top: -290px;
                     margin-left: 450px;
                     animation: image-fade-in 3s ease-in-out;
+                }
+                }
+
+                @media screen and (max-width: 1024px) {
+                .blurb_holder{
+                    opacity: 0;
+                }
                 }
 
                 @media screen and (min-width: 801px) {
@@ -381,7 +402,7 @@ const GlobalStyles = () => (
                     .process {
                         display: flex;
                         font-family: 'HelveticaNeue-Thin';
-                        font-size: 2vw;
+                        font-size: 2.5vw;
                         padding-top: 10px;
                     }
                 }
@@ -421,6 +442,44 @@ const GlobalStyles = () => (
                     font-size: 0.875rem;
                     text-decoration: none;
                     margin-top: 5px;
+                }
+
+                .gis_title{
+                    font-family: 'HelveticaNeue-Thin';
+                    font-size: 1.5rem;
+                    text-decoration: none;
+                    margin-top: -20px;                   
+                }
+
+                .gis_image {
+                    display: block;
+                    float: center;
+                    text-align: center;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                @media screen and (min-width: 801px) {
+                    .gis_description {
+                    display: flex;
+                    font-family: 'HelveticaNeue-Thin';
+                    font-size: 1.5vw;
+                    /* padding-top: 10px; */
+                    margin-left: auto;
+                    margin-right: auto;
+                    width: 62%;
+                }   
+                }
+
+                @media screen and (max-width: 800px) {
+                    .gis_description {
+                        display: flex;
+                        font-family: 'HelveticaNeue-Thin';
+                        font-size: 2.5vw;
+                        /* padding-top: 10px; */
+                        /* margin-left: 10vw;
+                        margin-right: 10vw; */
+                    }
                 }
 
                 a:link {

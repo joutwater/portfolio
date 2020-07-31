@@ -13,8 +13,8 @@ function Header({isDark}){
                     <div className="dropdown">
                     <button className="dropbtn">WORK</button>
                     <div className="dropdown-content">
-                        <a href="#">Data Visualization</a>
-                        <a href="#">GIS</a>
+                        <a href="/">Data Visualization</a>
+                        <a href="/gis">GIS</a>
                         <a href="#">Imagery</a>
                     </div>
                     </div>
