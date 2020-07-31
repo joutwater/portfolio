@@ -29,6 +29,9 @@ const Datavisualization = ({ datavisualization }) => {
           </video>
           ))} 
       </div>
+      <div className="documentation">
+      <a href="/">BACK TO PROJECTS</a>
+      </div>
     </div>
   )
   }

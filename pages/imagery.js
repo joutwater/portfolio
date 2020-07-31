@@ -1,18 +1,18 @@
 import fetch from 'isomorphic-unfetch'
 
-const Gis = ({ giss }) => {
-    giss.sort((a, b) => (a.list_ID > b.list_ID) ? 1 : -1);
+const Imagery = ({ imageries }) => {
+    imageries.sort((a, b) => (a.list_ID > b.list_ID) ? 1 : -1);
     return(
     <div className="container">
-        <p className="gis_title">GIS WORK</p>
+        <p className="gis_title">IMAGERY WORK</p>
 
-      {giss.map((gis, i) => (
+      {imageries.map((imagery, i) => (
         <div>
         <div className="gis_image">
-        <img id={gis.list_ID} src={gis.image[0].url} width="750px" alt=""/>
+        <img id={imagery.list_ID} src={imagery.image[0].url} width="750px" alt=""/>
         </div>
-        <span className="gis_description" key={gis.id}>
-        <p id={gis.list_ID} href={"/gis/"}>{gis.description}</p><br></br>
+        <span className="gis_description" key={imagery.id}>
+        <p id={imagery.list_ID} href={"/gis/"}>{imagery.description}</p><br></br>
         </span>
         </div>
       ))}
@@ -29,15 +29,15 @@ const Gis = ({ giss }) => {
 }
 
 export async function getServerSideProps({query}){
-    const res = await fetch(process.env.API_URL+'/gis')
+    const res = await fetch(process.env.API_URL+'/imageries')
     // const res2 = await fetch(process.env.API_URL+'/data-visualizations?slug='+query.slug)
     const data = await res.json()
   
     return {
       props: {
-        giss: data
+        imageries: data
       }
     }
   }
 
-export default Gis
+export default Imagery

@@ -15,7 +15,7 @@ function Header({isDark}){
                     <div className="dropdown-content">
                         <a href="/">Data Visualization</a>
                         <a href="/gis">GIS</a>
-                        <a href="#">Imagery</a>
+                        <a href="/imagery">Imagery</a>
                     </div>
                     </div>
                     <div className="header_info">INFO</div>
