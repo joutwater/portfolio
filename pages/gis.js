@@ -4,7 +4,7 @@ const Gis = ({ giss }) => {
     giss.sort((a, b) => (a.list_ID > b.list_ID) ? 1 : -1);
     return(
     <div className="container">
-        <p className="gis_title">GIS WORK</p>
+        <p className="gis_title">GIS</p>
 
       {giss.map((gis, i) => (
         <div>
@@ -16,13 +16,6 @@ const Gis = ({ giss }) => {
         </span>
         </div>
       ))}
-
-    {/* <div className="blurb_holder">
-      <span>{datavisualizations[isShown].blurb}</span>
-    </div> */}
-    {/* <div className="image_holder">
-      <img id={gis.list_ID} src={giss.image.url} width="750px" alt=""/>
-    </div> */}
     </div>
     )
 
@@ -30,7 +23,6 @@ const Gis = ({ giss }) => {
 
 export async function getServerSideProps({query}){
     const res = await fetch(process.env.API_URL+'/gis')
-    // const res2 = await fetch(process.env.API_URL+'/data-visualizations?slug='+query.slug)
     const data = await res.json()
   
     return {

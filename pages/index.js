@@ -1,14 +1,11 @@
 import fetch from 'isomorphic-unfetch'
-import Card from 'components/Card'
 import BarSlot from 'components/BarSlot'
-import Link from 'next/link'
 import React, { useState } from 'react';
 
 const Home = ({ datavisualizations }) => {
   const[isShown, setIsShown] = useState(false);
   datavisualizations.sort((a, b) => (a.list_ID > b.list_ID) ? 1 : -1);
-
-console.log(datavisualizations[1].list_ID);
+// console.log(datavisualizations[1].list_ID);
   return(
     <div className="container">
         <BarSlot datavisualizations={datavisualizations} index={isShown}/>
@@ -41,7 +38,6 @@ console.log(datavisualizations[1].list_ID);
 
   export async function getServerSideProps({query}){
     const res = await fetch(process.env.API_URL+'/data-visualizations')
-    // const res2 = await fetch(process.env.API_URL+'/data-visualizations?slug='+query.slug)
     const data = await res.json()
   
     return {
