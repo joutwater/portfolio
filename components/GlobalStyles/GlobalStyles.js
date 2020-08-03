@@ -391,7 +391,7 @@ const GlobalStyles = () => (
                     .process {
                     display: flex;
                     font-family: 'HelveticaNeue-Thin';
-                    font-size: 1.5vw;
+                    font-size: 1rem;
                     padding-top: 10px;
                     margin-left: 14vw;
                     margin-right: 14vw;
@@ -402,7 +402,7 @@ const GlobalStyles = () => (
                     .process {
                         display: flex;
                         font-family: 'HelveticaNeue-Thin';
-                        font-size: 2.5vw;
+                        font-size: 1rem;
                         padding-top: 10px;
                     }
                 }
@@ -432,14 +432,14 @@ const GlobalStyles = () => (
 
                 .live_site {
                     font-family: 'HelveticaNeue-Thin';
-                    font-size: 0.875rem;
+                    font-size: 1rem;
                     text-decoration: none;
                     margin-top: 30px;
                 }
 
                 .documentation {
                     font-family: 'HelveticaNeue-Thin';
-                    font-size: 0.875rem;
+                    font-size: 1rem;
                     text-decoration: none;
                     margin-top: 5px;
                 }
@@ -463,7 +463,7 @@ const GlobalStyles = () => (
                     .gis_description {
                     display: flex;
                     font-family: 'HelveticaNeue-Thin';
-                    font-size: 1.5vw;
+                    font-size: 1rem;
                     /* padding-top: 10px; */
                     margin-left: auto;
                     margin-right: auto;
@@ -475,7 +475,7 @@ const GlobalStyles = () => (
                     .gis_description {
                         display: flex;
                         font-family: 'HelveticaNeue-Thin';
-                        font-size: 2.5vw;
+                        font-size: 1rem;
                         /* padding-top: 10px; */
                         /* margin-left: 10vw;
                         margin-right: 10vw; */

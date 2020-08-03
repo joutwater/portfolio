@@ -11,11 +11,14 @@ const Datavisualization = ({ datavisualization }) => {
       <div className="process">
         {datavisualization.process}
       </div>
+      <div className="process">
+        {datavisualization.tools}
+      </div>
       <div className="live_site">
-      <a href={datavisualization.link2}>LIVE SITE</a>
+      <a href={datavisualization.link2}>Live site</a>
       </div>
       <div className="documentation">
-      <a href={datavisualization.link}>DOCUMENTATION</a>
+      <a href={datavisualization.link}>Documentation</a>
       </div>
       <div className="image">
       {datavisualization.image.map(image => (
@@ -30,7 +33,7 @@ const Datavisualization = ({ datavisualization }) => {
           ))} 
       </div>
       <div className="documentation">
-      <a href="/">BACK TO PROJECTS</a>
+      <a href="/">Back to projects</a>
       </div>
     </div>
   )
