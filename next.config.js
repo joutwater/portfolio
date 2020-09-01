@@ -1,5 +1,7 @@
 const path = require('path')
 
+require('newrelic')
+
 require('dotenv').config()
 
 module.exports = {
