@@ -1,7 +1,6 @@
 import fetch from 'isomorphic-unfetch'
 import BarSlot from 'components/BarSlot'
 import React, { useState } from 'react';
-require ('newrelic');
 
 const Home = ({ datavisualizations }) => {
   const[isShown, setIsShown] = useState(false);
