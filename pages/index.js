@@ -1,3 +1,4 @@
+require ('newrelic');
 import fetch from 'isomorphic-unfetch'
 import BarSlot from 'components/BarSlot'
 import React, { useState } from 'react';
