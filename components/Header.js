@@ -9,7 +9,13 @@ function Header({isDark}){
                     <div className="header_name">
                         <Link href="/"><a>JOHN OUTWATER</a></Link>
                     </div>
-                    {/* <div className="header_work"></div> */}
+                    <div className="dropdown">
+                    <button className="dropbtn">INFO</button>
+                    <div className="dropdown-content2">
+                        <p>jcoutwater@gmail.com</p>
+                        <p>8056376011</p>
+                    </div>
+                    </div>
                     <div className="dropdown">
                     <button className="dropbtn">WORK</button>
                     <div className="dropdown-content">
@@ -18,7 +24,6 @@ function Header({isDark}){
                         <a href="/imagery">Imagery</a>
                     </div>
                     </div>
-                    <div className="header_info">INFO</div>
                 </div>
 
         </HeaderStyled>
@@ -97,7 +102,8 @@ background: ${props => props.isDark ? "#000000" : "#efefef"};
     /* position: relative;
     display: inline-block; */
     margin-top: -16px;
-    margin-right: 6.5rem;
+    margin-right: 0rem;
+    padding-left: 5rem;
     flex: 1;
     text-align: right;
     float: right;
@@ -108,10 +114,19 @@ background: ${props => props.isDark ? "#000000" : "#efefef"};
     display: none;
     position: absolute;
     background-color: #f1f1f1;
-    min-width: 160px;
+    min-width: 120px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-    
+    }
+
+    .dropdown-content2 {
+    display: none;
+    position: absolute;
+    right: 0rem;
+    background-color: #f1f1f1;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
     }
 
     /* Links inside the dropdown */
@@ -124,11 +139,23 @@ background: ${props => props.isDark ? "#000000" : "#efefef"};
     
     }
 
+    /* Text inside the dropdown */
+    .dropdown-content2 p {
+    color: black;
+    padding: 12px 8px;
+    text-decoration: none;
+    display: block;
+    text-align: right;
+    
+    }
+
     /* Change color of dropdown links on hover */
     .dropdown-content a:hover {background-color: #ddd;}
+    .dropdown-content2 a:hover {background-color: #ddd;}
 
     /* Show the dropdown menu on hover */
     .dropdown:hover .dropdown-content {display: block;}
+    .dropdown:hover .dropdown-content2 {display: block;}
 
     
 }
