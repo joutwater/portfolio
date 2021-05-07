@@ -4,8 +4,8 @@ import React, { useState } from 'react';
 
 const Home = ({ datavisualizations }) => {
   const[isShown, setIsShown] = useState(false);
-  datavisualizations.sort((a, b) => (a.list_ID > b.list_ID) ? 1 : -1);
-// console.log(datavisualizations[1].list_ID);
+  datavisualizations = datavisualizations.filter(d => d.publish == true).sort((a, b) => (a.list_ID > b.list_ID) ? 1 : -1);
+// console.log(datavisualizations[1].publish);
   return(
     <div className="container">
         <BarSlot datavisualizations={datavisualizations} index={isShown}/>

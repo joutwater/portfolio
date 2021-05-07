@@ -1,7 +1,7 @@
 import fetch from 'isomorphic-unfetch'
 
 const Imagery = ({ imageries }) => {
-    imageries.sort((a, b) => (a.list_ID > b.list_ID) ? 1 : -1);
+    imageries = imageries.filter(d => d.publish == true).sort((a, b) => (a.list_ID > b.list_ID) ? 1 : -1);
     return(
     <div className="container">
         <p className="gis_title">IMAGERY</p>

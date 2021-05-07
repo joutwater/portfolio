@@ -1,11 +1,12 @@
 import fetch from 'isomorphic-unfetch'
 
 const Gis = ({ giss }) => {
-    giss.sort((a, b) => (a.list_ID > b.list_ID) ? 1 : -1);
+    // if (giss.publish === true){}
+    giss = giss.filter(d => d.publish == true).sort((a, b) => (a.list_ID > b.list_ID) ? 1 : -1);
     return(
     <div className="container">
         <p className="gis_title">GIS</p>
-
+        
       {giss.map((gis, i) => (
         <div>
         <div className="gis_image">
@@ -18,7 +19,6 @@ const Gis = ({ giss }) => {
       ))}
     </div>
     )
-
 }
 
 export async function getServerSideProps({query}){
